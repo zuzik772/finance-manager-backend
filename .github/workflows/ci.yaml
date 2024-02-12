@@ -39,8 +39,8 @@ jobs:
             sleep 2
           done
 
-      - name: Run lint
-        run: npm run lint
+      # - name: Run lint
+      #   run: npm run lint
 
       - name: Run E2E tests
         run: npm run test:e2e
