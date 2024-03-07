@@ -7,7 +7,6 @@ import {
 } from 'class-validator';
 
 export class CreateEntryDto {
-  [x: string]: any;
   @IsNotEmpty()
   @IsNumber()
   amount: number;

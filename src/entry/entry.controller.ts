@@ -27,17 +27,17 @@ export class EntryController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.entryService.findOne(+id);
+  findOne(@Param('id') id: number) {
+    return this.entryService.findOne(id);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateEntryDto: UpdateEntryDto) {
-    return this.entryService.update(+id, updateEntryDto);
+  update(@Param('id') id: number, @Body() updateEntryDto: UpdateEntryDto) {
+    return this.entryService.update(id, updateEntryDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.entryService.remove(+id);
+  remove(@Param('id') id: number) {
+    return this.entryService.remove(id);
   }
 }
